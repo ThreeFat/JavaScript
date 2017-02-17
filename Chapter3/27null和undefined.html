@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //undefined派生自null
+    console.log(undefined == null);//true 值是相等的
+    console.log(undefined === null);//false 数据类型不一样
+
+    //undefined总结
+    var a;//1.变量声明了没赋值是undefined
+    var arr = [1, 2];
+    console.log(arr[2]);//2.数组中没赋值的项目是undefined
+    function fn(a, b) {
+        console.log(b);//3.形参没有接收到实参 是undefined
+    }
+    fn(1);
+    console.log(fn());//4.函数没有返回值 默认返回undefined
+    var obj = {};
+    //obj.name = "zs";
+    console.log(obj.name);//5.对象属性没赋值也是undefined
+    //总之 null一般是代码手动给的 undefined一般是解析器自动给的
+
+    var str = "aa";
+    str.replace();
+
+
+</script>
+</body>
+</html>

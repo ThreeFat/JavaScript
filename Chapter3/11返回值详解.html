@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+
+    function fn1() {
+        return 1;
+        return undefined;
+    }
+    //函数的返回值是什么 调用这个函数就相当于调用了什么
+    var num = fn1() + 1;//var num = 1 + 1;
+    console.log(fn1());//undefined
+    // 如果函数没有返回值 那么就相当于返回了一个undefined
+
+    function fn2() {
+        console.log("return前面的代码");
+        return 0;//函数执行到return后 就返回了 后面的就不再执行了
+        console.log("return后面的代码");
+    }
+    console.log(fn2);//如果值打印函数名 会通过函数名找到函数体 把函数体打印
+    console.log(fn2());//如果想打印的是函数的返回值 那么一定要记得在后面加小括号
+    //加了小括号才是调用 函数才会执行
+
+
+</script>
+</body>
+</html>

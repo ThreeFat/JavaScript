@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //把1-100之间所有的奇数，放到数组中
+    var arr = [];
+    /*for (var i = 1; i <= 100; i++) {
+     if (i % 2 !== 0) {
+     arr[i] = i;
+     }
+     }//这是一个稀疏数组 索引号不连续*/
+
+    /*var j = 0;
+     for (var i = 1; i <= 100; i++) {
+     if (i % 2 !== 0) {
+     arr[j] = i;
+     j++;
+     }
+     }*/
+
+    //var length = 0;
+    //arr.length表示的是数组元素的个数 他是会随着数组的变化动态改变的
+    for (var i = 1; i <= 100; i++) {
+        if (i % 2 !== 0) {
+            arr[arr.length] = i;
+        }
+    }
+//arr[0]=1
+//arr[1]=3
+//arr[2]=5
+//arr[3]=7
+    console.log(arr);
+
+</script>
+</body>
+</html>

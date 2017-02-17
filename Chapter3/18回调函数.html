@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var num = 10;
+    var fn = function () {
+        console.log("fn中的代码");
+    };
+    //console.log(typeof fn());//函数后面加了小括号 就是对函数的调用
+    // 函数的返回值是什么 调用这个函数就相当于调用了什么
+    //当前这个函数没有返回值 就是返回了undefined
+    //typeof undefined 输出结果就是undefined
+    //console.log(typeof fn);//千万不要加小括号 加了就成了调用了 function
+
+    function fn2(a) {
+        //console.log(a);
+        a();
+    }
+    //fn2(num);
+    fn2(fn);//像这种被当作参数传递的函数就是回调函数
+
+
+</script>
+</body>
+</html>

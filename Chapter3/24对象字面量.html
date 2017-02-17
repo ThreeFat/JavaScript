@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var stu = new Object();
+    stu.name = "zs";
+    stu.age = 18;
+    stu.sayHi = function () {
+        console.log("大家好，我是" + this.name);
+    };
+
+    //对象的字面量
+    var stu2 = {};
+    stu2.name = "zs";
+    stu2.age = 18;
+    stu2.sayHi = function () {
+        console.log("大家好，我是" + this.name);
+    };
+
+    var stu3 = {
+        name: "ls",
+        age: 18,
+        sayHi: function () {
+            console.log("大家好，我是" + this.name);
+        }
+    };
+    var stu4 = {
+        "name": "ls",
+        "age": 18,
+        "sayHi": function () {
+            console.log("大家好，我是" + this.name);
+        }
+    };
+
+
+    //JSON javascript object notation JS对象标记法
+
+</script>
+</body>
+</html>

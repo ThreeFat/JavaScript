@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var arr = [1, 2, 3, 4, 5];
+    //对数组进行遍历
+    /*for (var i = 0; i < arr.length; i++) {
+     console.log(arr[i]);
+     }*/
+
+    //for(var 键 in 要遍历的对象 )
+    /*for (var key in arr) {
+     //console.log(key);
+     console.log(arr[key]);
+     }*/
+
+    var obj = {
+        name: "zs",
+        age: 18,
+        sayHi: function () {
+            console.log("大家好，我是" + this.name);
+        }
+    };
+    //遍历对象 用 for..in
+    for (var k in obj) {
+        //console.log(k);
+        console.log(obj[k]);
+    }
+
+    //var obj = null;
+
+
+</script>
+</body>
+</html>

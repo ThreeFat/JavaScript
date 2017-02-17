@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //自己创建一个学生对象（要有姓名 年龄 性别 分数 有同学 会打招呼）
+    var stu = new Object();
+    //属性
+    stu.name = "linlin";
+    stu.age = 18;
+    stu.gender = 0;
+    stu.score = 9;
+    //方法
+    stu.sayHi = function () {
+        console.log("大家好，我是" + this.name + "我今年" + this.age);
+    };
+    //console.log(stu.name);
+    //stu.sayHi();
+
+    var stu2 = new Object();
+    stu2.name = "bobo";
+    stu2.age = 80;
+    stu2.gender = 2;
+    stu2.score = 101;
+    //属性可以是任何值 可以是基本类型的值 可以是对象 也可以是函数
+    //只不过如果是函数的话 我们一般管他叫 方法
+    stu2.sayHi = function () {
+        console.log("大家好，我是" + this.name + "我今年" + this.age);
+    };
+    stu.classMate = stu2;
+    console.log(stu);
+
+
+</script>
+</body>
+</html>

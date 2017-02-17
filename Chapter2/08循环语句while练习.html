@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //1到100之间整数的和（while）
+    /*var i = 1;
+     var sum = 0;
+     while (i <= 100) {
+     //sum = sum + i;
+     sum += i;
+     i++;
+     }
+     console.log(sum);*/
+    //1到100之间整数的和（dowhile）
+    /*var i = 1;
+     var sum = 0;
+     do {
+     sum += i;
+     i++;
+     } while (i <= 100);
+     console.log(sum);*/
+
+    //循环输出询问"你爱我吗？"选择"y/n"若输入为y则打印"我也是"若输入为n则继续询问(dowhile)
+    //prompt提示
+    /*while (true) {
+     var msg = prompt("你爱我吗？(y/n)");//返回值是输入的内容
+     if (msg === "y") {
+     console.log("我也是，我也很爱我自己");
+     break;
+     }
+     }*/
+    /* do {
+     var msg = prompt("你爱我吗？(y/n)");//返回值是输入的内容
+     if (msg === "y") {
+     console.log("我也是，我也很爱我自己");
+     break;
+     }
+     } while (true);*/
+
+    while (true) {
+        var num = Math.floor(Math.random() * 8);
+        if (num == 5) {
+            console.log(num);
+            break;
+        }
+    }
+
+</script>
+</body>
+</html>

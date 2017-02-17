@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var fn = function () {
+        console.log("fn");
+    };
+    //函数定义完后 就赋值给了一个变量 将来是通过变量名来调用这个函数
+    //所以这个函数就没必要起名字了
+    //没有名字的函数就叫做匿名函数
+
+    //匿名函数的使用
+    //1声明对象方法
+    //2立即执行函数
+    (function () {
+        console.log("a");
+    })();
+    //有的函数 我们定义完成后将来不需要对他进行调用 只是现在让她执行一下即可
+
+
+</script>
+</body>
+</html>

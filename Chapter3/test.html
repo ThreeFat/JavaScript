@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*  //   var arr=new Array(5);
+     //   var arr=new Array(1,2,3);
+     var arr = [];
+     //    arr[0]=1;
+     //console.log(arr.length); [1,2]
+
+
+     for (var i=1;i<=10;i++) {
+
+     arr[arr.length]=i;
+     }
+     console.log(arr);
+
+     //    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  arr[arr.length-1]
+
+     for(var i=0;i<=arr.length-1;i++){
+
+
+
+     console.log(arr[i]);
+     }
+
+
+     arr.length=2;
+
+     console.log(arr);
+
+     arr.length=20;
+     console.log(arr[11]);
+
+
+     function chaoshi(money){
+     //如果钱多余30给苹果  多余20给香蕉  多余10块给西瓜  多于 5块给泡面
+     if(money>30){
+     return '苹果';
+     }else if(money>20){
+     return '香蕉';
+     }else if(money>10){
+     return '西瓜';
+     }else{
+     return '泡面';
+     }
+
+     }
+
+
+     var chide=chaoshi(30);
+
+     console.log("我要吃"+chide);
+
+
+     //    b();
+
+     //    function getArea(r){
+     //
+     //          var area=Math.PI*r*r;
+     //        return area;
+     //
+     //    }
+     //
+     //    console.log(getArea(2));
+
+     */
+
+
+
+
+
+
+
+
+    //    var fun2;
+    //  var num;
+    //  c(1,2,3);
+    //   // fun2();
+    //
+    //    console.log(fun2);
+    //    console.log(num);
+    //
+    //    function c(a,b,e,f){
+    //        console.log(111);
+    //
+    //        return a+b+e;
+    //    }
+    //
+    //    c(1,2);
+    //    c(2,3,4);
+    //
+    //     fun2=function (){
+    //        console.log(111);
+    //    }
+    //
+    //     num=1;
+
+
+    //  (function (){
+    //        console.log(111);
+    //    })()
+    var a = 1;
+    /*
+     function b(){
+     var c=1;
+     console.log(c);
+     }
+     console.log(c);
+     b();*/
+
+    //  function b(){
+    //       a=2;
+    //      console.log(a);
+    //  }
+    //  console.log(a);
+    //  b();
+
+
+    function b(e) {
+        e()
+    }
+
+    function d() {
+        console.log(111);
+    }
+
+    b(d);
+
+
+    //    arr= new Array();
+    //    arr1=[];
+    //
+    //    obj=new Object();
+    //
+    //    obj.name=11;
+    //    obj1 = {
+    //        name: '吴彦祖',
+    //        age: 18,
+    //        teach: function () {
+    //            alert('我在上课哦');
+    //        }
+    //    };
+    //
+    //    for(var k in obj1){
+    //        console.log(obj1[k]);
+    //    }
+
+
+    function getSum(a, b) {
+        console.log(a + b);
+        return a + b;
+    }
+
+    console.log(getSum(1, 2));
+
+    var getSum1 = function (c, d, e) {
+        return c + d;
+
+    };
+
+    console.log(getSum1(2, 3));
+
+    function c(fn) {
+        getSum(2, 3);
+
+        fn();
+    }
+
+    //    c();
+
+
+    function fun1() {
+        console.log('ac');
+    }
+
+    c(fun1);
+
+    var obj = new Object();
+    obj.name = "aaa";
+    obj.sayHi = function () {
+        console.log('sayhi');
+    };
+
+    obj.sayHi();
+
+    var obj1 = {
+        name: 'bbb',
+        age: 18
+
+    };
+
+    for (var k in obj1) {
+        console.log(k);
+        console.log(obj1[k]);
+    }
+    console.log(obj1.age);
+
+
+</script>
+</body>
+</html>

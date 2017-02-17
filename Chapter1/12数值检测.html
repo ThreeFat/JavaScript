@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var a = "a" / 2;
+    console.log(a);//NaN Not a Number 不是一个（有意义的）数字
+    console.log(typeof a);//number
+    console.log(a == a);//false
+    //发起飙来自己都打
+
+    //isNaN();//是 不是一个（有意义的）数字
+    //没意义true  有意义false
+    console.log(isNaN(a));//true
+    console.log(isNaN(NaN));//true
+    console.log(isNaN(1));//false
+    console.log(isNaN(Infinity));//有意义的返回false
+
+
+</script>
+</body>
+</html>

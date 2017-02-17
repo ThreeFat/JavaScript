@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //形参和实参个数不一致
+    //实参比形参多 没有形参接收后面实参的值 这个值就废了
+    //实参比形参少 有的形参接收不到值 值就成了undefined
+    //形式参数 形参
+    /*function getSum(a, b) {
+     console.log(b);
+     return a + b;
+     }
+     var sum = getSum(1);//实际参数 实参
+     console.log(sum);*/
+
+    //函数是一个独立的区域 里面的变量和参数不会影响到外面的变量和参数
+    /*function getSum(a, b) {
+        a = 100;
+        console.log(a);
+        return a + b;
+    }
+    var a = 10;
+    var b = 20;
+    getSum(a, b);//形参和实参没有关系
+    console.log(a);*/
+    // 只不过在调用的时候 把实参的值复制了一份 赋值给了形参
+
+
+</script>
+</body>
+</html>

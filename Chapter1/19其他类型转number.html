@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*//Number可以将任意类型转换成number
+     console.log(Number(true));//
+     console.log(Number(false));//
+     console.log(Number(null));//
+     console.log(Number(undefined));//
+     //将字符串转换为数值
+     console.log(Number("123"));//
+     console.log(Number("123abc"));//
+     console.log(Number("123.12"));//
+     console.log(Number("123.12.12"));//
+     console.log(Number("123px"));//
+     //Number在处理字符串的时候 规则比较复杂 而且不符合我目的要求
+     //将字符串转换为数值 我们一般用parse函数
+     console.log(parseInt("123"));
+     console.log(parseInt("123px"));//脾气很好 如果有不能识别的 会忽略
+     console.log(parseInt("123.123"));
+     console.log(Number("123.123"));
+     console.log(parseFloat("123.123"));//
+
+     console.log(Number("123.123.123"));//
+     console.log(parseInt("123.123.123"));//
+     console.log(parseFloat("123.123.123"));//*/
+    //parseInt和parseFloat专门用来处理字符串
+    //console.log(parseInt(true));
+    //console.log(parseInt(null));
+    //console.log(parseInt(undefined));
+    //处理其他类型的时候还是用 Number
+
+    var str = "123";
+    //var num = str + 0;
+    //加是不行的 有字符串就是拼接
+    //-*/%
+    //var num = str - 0;
+    //var num = str / 1;
+    //var num = str * 1;
+    var num = +str;// 1 +1 正号
+    //var num = -(-str);//
+    //var num = str % (str + 1);//
+    //var num = str % (str * 1 + 1);//
+    //有问题
+    console.log(num);
+
+</script>
+</body>
+</html>

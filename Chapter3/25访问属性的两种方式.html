@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var arr = [1, 2, 3, 4, 5];
+    //  键   值
+    arr[0] = 1;
+
+    var obj = {};
+    //  键     值
+    //obj.name = "zs";
+    //obj["name"] = "zs";
+    //点语法和中括号都可以通过键 访问值
+    //点语法更方便 中括号更灵活
+    console.log(obj);
+
+    for (var i = 0; i <= 5; i++) {
+        //obj."n"+i 点语法 属性名是什么就必须写成什么
+        obj["n" + i] = i;//中括号语法是通过传入字符串来找属性名的
+        // 而这个字符串可以通过编程来拼接 这样就很灵活了
+    }
+    console.log(obj);
+
+
+</script>
+</body>
+</html>

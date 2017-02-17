@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //使用对象管理函数和变量
+    /*function show1() {
+     console.log("让顶部菜单显示的代码");
+     }
+     function hide1() {
+     console.log("让顶部菜单隐藏的代码");
+     }
+     function show2() {
+     console.log("让中部小箭头显示的代码");
+     }
+     function hide2() {
+     console.log("让中部小箭头隐藏的代码");
+     }*/
+    //将来函数多了 管理和使用都不方便
+    //通过对象来管理 可以解决这个问题
+    var topPart = new Object();
+    topPart.show = function () {
+        console.log("让顶部菜单显示的代码");
+    };
+    topPart.hide = function () {
+        console.log("让顶部菜单隐藏的代码");
+    };
+    var centerPart = new Object();
+    centerPart.show = function () {
+        console.log("让中部小箭头显示的代码");
+    };
+    centerPart.hide = function () {
+        console.log("让中部小箭头隐藏的代码");
+    };
+
+    topPart.show();
+    //通过对象找对象的方法 非常方法 可以点出来 有智能提示
+
+    centerPart.hide();
+
+
+</script>
+</body>
+</html>

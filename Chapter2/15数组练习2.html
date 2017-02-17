@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //var arr = [55, 3, 6, 7, 8, 3, 1];
+    //var arr = ["a", "bb", "ccc", "dddd"];
+    //求一组数中的所有数的和 和 平均值
+    /*var arr = [55, 3, 6, 7, 8, 3, 1];
+     var sum = 0;
+     for (var i = 0; i < arr.length; i++) {
+     //i
+     //arr[i]
+     //sum = sum + arr[i];
+     sum += arr[i];
+     }*/
+    //console.log(sum);
+    //console.log(sum / arr.length);
+
+    //求一组数中的最大值 (最大值 数组中比每一个值都大 就是最大值)
+    var arr = [55, 3, 6, 7, 8, 3, 78];
+    //假设
+    var max = arr[0];
+    for (var i = 0; i < arr.length; i++) {
+        //arr[i];
+        if (max < arr[i]) {
+            max = arr[i];
+        }
+    }
+    //console.log(max);
+    //求一组数中的最小值及其索引
+    /*var arr = [55, 3, 6, 7, 8, 1, 78];
+     var min = arr[0];
+     var minIndex = 0;
+     for (var i = 0; i < arr.length; i++) {
+     //arr[i]
+     if (min > arr[i]) {
+     min = arr[i];
+     minIndex = i;
+     }
+     }
+     console.log(min);
+     console.log(minIndex);*/
+
+
+    //求一组数中的最大值和最小值以及所在位置
+    var arr = [55, 3, 6, 7, 8, 1, 78];
+    var max = arr[0];
+    var maxIndex = 0;
+    var min = arr[0];
+    var minIndex = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+            max = arr[i];
+            maxIndex = i;
+        }
+        if (min > arr[i]) {
+            min = arr[i];
+            minIndex = i;
+        }
+    }
+    console.log(max);
+    console.log(maxIndex);
+    console.log(min);
+    console.log(minIndex);
+
+
+</script>
+</body>
+</html>

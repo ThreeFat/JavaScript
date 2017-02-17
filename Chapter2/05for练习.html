@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //打印正方形
+    /*for (var i = 1; i <= 10; i++) {
+     for (var j = 1; j <= 10; j++) {
+     document.write("☆");
+     }
+     document.write("<br/>");
+     }*/
+    //打印直角三角形
+    /*for (var i = 1; i <= 10; i++) {
+     for (var j = 1; j <= i; j++) {
+     document.write("☆");
+     }
+     document.write("<br/>");
+     }*/
+    //打印 9 * 9 乘法表
+    /*for (var i = 1; i < 10; i++) {
+     for (var j = 1; j <= i; j++) {
+     document.write(j + "*" + i + "=" + i * j);// 1 * 1 = 1
+     document.write(" ");
+     }
+     document.write("<br/>");
+     }*/
+
+
+
+//    倒三角
+
+
+        for(var i=10;i>=0;i--){
+            for(var j=i;j>=0;j--){
+                document.write("❤")
+            }
+            document.write("<br/>");
+        }
+
+
+    //本金10000元存入银行，年利率是千分之三，每过1年，将本金和利息相加作为新的本金。计算5年后，获得的本金是多少？
+    /*var money = 10000;
+     var rate = 0.003;
+     //先计算一年后的
+     //money = money + money * rate;
+     //money = money + money * rate;
+     //money = money + money * rate;
+     //money = money + money * rate;
+     //money = money + money * rate;
+
+     for (var i = 1; i <= 5; i++) {
+     money = money + money * rate;
+     }
+     console.log(money);//10150.90*/
+
+
+    //兔子数列规律为：1，1，2，3，5，8，13，21
+    //前两项的和
+    var n1 = 1;
+    var n2 = 1;
+    var n3 = n1 + n2;//n3不再表示第三项 用他来表示当前要求值的那一项
+
+    for (var i = 3; i <= 24; i++) {
+        n3 = n1 + n2;//n3=8
+        n1 = n2;  //n1=5
+        n2 = n3;  //n2=8
+    }
+
+    console.log(n3);//144
+
+
+
+</script>
+</body>
+</html>

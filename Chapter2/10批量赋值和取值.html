@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //批量赋值
+    /*var arr = [];
+     console.log(arr);
+     arr[0] = 1;
+     arr[1] = 1;
+     arr[2] = 1;
+     //
+     for (var i = 0; i <= 20; i++) {
+     arr[i] = i;
+     }
+     console.log(arr);
+     console.log(arr.length);*/
+
+    //批量取值(遍历数组)
+    // length个元素 最后一个元素的索引是 length-1
+    // 3个元素 最后一个元素的索引是 3-1
+    //         0  1  2
+    var arr = [1, 2, 3];
+    //console.log(arr[0]);
+    //console.log(arr[1]);
+    //console.log(arr[2]);
+    //索引号的范围 从0开始 到length-1结束
+    /*for (var i = 0; i <= arr.length - 1; i++) {
+     //console.log(i);
+     console.log(arr[i]);
+     }*/
+
+    //遍历数组就这么写
+    /*for (var i = 0; i < arr.length; i++) {
+     console.log(arr[i]);
+     }*/
+    //反向遍历 从length-1开始 到 0 结束
+    var arr = [1, 2, 3, 4, 5];
+    for (var i = arr.length - 1; i >= 0; i--) {
+        //console.log(i);
+        console.log(arr[i]);
+    }
+
+
+</script>
+</body>
+</html>

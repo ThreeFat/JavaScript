@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var bool = true;
+    var bool = false;
+
+    //虽然Boolean类型的字面值只有两个
+    //但所有类型的值都有与这两个 Boolean 值等价的值
+    console.log(Boolean(""));
+    console.log(Boolean(0));
+    console.log(Boolean(NaN));
+    console.log(Boolean(null));
+    console.log(Boolean(undefined));
+    console.log(Boolean("0"));
+    console.log(Boolean("false"));
+
+
+    var message = "hello";
+    if (message) {
+        alert(message + " world");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //array 数组 也是一个对象 创建对象用构造函数
+    //var arr = new Array();//数组的构造函数 创建的是一个空数组
+    //var arr = new Array(1, 2, 3, 4, 5);//创建一个里面装有数值的数组
+    //var arr = new Array(5);//如果只有一个数值 这个数值表示的是数组的length
+    //var arr = new Array("a", "b", "c");
+    //var arr = new Array("a", 2, true, null, undefined);
+    // JS是弱类型语言 数组可以保存任意类型的值
+    // 虽然可以保存任意类型的值 但是我们用数组的时候 一般都是保存 同一类型的值
+    //var arr = new Array("4");//只有传入一个数值的时候 才表示数组元素的个数
+
+    //字面量
+    //var arr = [];//表示数组
+    //var arr = [1, 2, 3, 4, 5];
+    //var arr = ["a", "b", "c"];
+    //var arr = ["a", 2, true, null, undefined];
+    //var arr = [5];//因为直接量直接表示的就是数组的内容 所以再传入一个数值表示的也是内容
+
+
+    var arr = [];
+    //数组的索引是从0开始的
+    arr[0] = 1;//数组名[索引] = 要赋的值
+    arr[1] = 1;
+    console.log(arr);
+    console.log(arr[0]);//取值 数组名[索引]
+    console.log(arr.length);//2 数组中元素的个数
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //求x-y之间所有数的和
+    function getSum(x, y) {
+        var sum = 0;
+        for (var i = x; i <= y; i++) {
+            sum += i;
+        }
+        //console.log(sum);//现在求出来的结果只能在控制台打印
+        return sum;//把求出来的和 返回 让调用的人自由使用
+    }
+    //函数内部的变量和参数不会影响外部的变量和参数
+    //var sum = getSum(1, 5);//函数的返回值是什么 调用这个函数就相当于调用了什么
+    //console.log(sum);
+    //console.log(getSum(1, 5));
+    //alert(sum);
+    //alert(getSum(1, 5))
+    //console.log(sum + 10);
+    //console.log(getSum(1, 5) + 10);
+
+    //求x-y之间所有数的乘积
+    function getPro(x, y) {
+        var pro = 1;
+        for (var i = x; i <= y; i++) {
+            //pro = pro * i;
+            pro *= i;
+        }
+        return pro;
+    }
+    console.log(getPro(1, 5));
+    console.log(getPro(1, 15));
+
+    //Math.PI 3.14
+
+
+</script>
+</body>
+</html>

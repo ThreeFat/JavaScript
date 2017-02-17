@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function diaosi() {
+        console.log("屌丝会搬砖挣钱");
+        return 100;
+    }
+    function nvshen(fn) {
+        var money = 0;//没钱了
+        //只要给别人打电话 别人就会给他钱
+        money = fn();
+        console.log("女神现在的钱数:" + money);
+    }
+    nvshen(diaosi);//千万注意这里没有小括号
+</script>
+</body>
+</html>

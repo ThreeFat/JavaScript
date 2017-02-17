@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    var arr = [];
+    for (var i = 9999; i >= 0; i--) {
+        arr[arr.length] = i;
+    }
+    console.log(arr);
+
+    var start = +new Date();
+    for (var i = 0; i < arr.length - 1; i++) {
+        for (var j = 0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    var end = +new Date();
+    console.log(arr);
+    console.log(end - start);
+
+
+</script>
+</body>
+</html>

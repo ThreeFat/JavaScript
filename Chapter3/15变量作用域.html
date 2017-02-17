@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //全局变量 局部变量
+    //全局变量 哪里都可以使用的变量就是全局变量
+    var a = "a";//在最外层声明的变量就是全局变量
+    //console.log(a);
+    /*function fn() {
+     console.log(a);//全局变量 在哪儿都能用
+     }
+     fn();*/
+
+    function fn2() {
+        var b = "b";//在函数内部声明的变量 就是局部变量
+        //局部变量只能在当前函数内部使用
+        //console.log(b);
+        c = "c";//在函数内部 前面没有加var声明的变量 是全局变量
+        //我们绝对不要这样写
+        console.log(c);
+    }
+    fn2();
+    //console.log(b);//外部无法使用
+    console.log(c);//c是全局变量
+
+</script>
+</body>
+</html>

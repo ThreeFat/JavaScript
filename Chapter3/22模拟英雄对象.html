@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var hero = new Object();
+    //属性 -- 变量 -- 特征 -- 名词
+    //var name = "linlin";
+    hero.name = "linlin";
+    hero.level = 1;
+    //对象名.属性名 = 要赋的值
+    //方法 -- 函数 -- 行为 -- 动词
+    /*function moveRight() {
+     console.log("英雄在往右走");
+     }
+     var moveRight = function () {
+     console.log("英雄在往右走");
+     };*/
+    hero.moveRight = function () {
+        console.log("英雄在往右走");
+    };
+    hero.attack = function (name) {
+        //console.log(hero.name + "在攻击" + name);
+        //this 指的就是当前的对象
+        console.log(this.name + "在打" + name);
+    };
+    //对象名.方法名 = function(){ 代码 };
+
+    //属性的使用
+    //console.log(hero.name);//对象名.属性名
+    //方法的使用
+    //hero.moveRight();//对象名.方法名();
+    hero.attack("linlin2");
+    hero.attack("招呼");
+
+
+
+
+</script>
+</body>
+</html>

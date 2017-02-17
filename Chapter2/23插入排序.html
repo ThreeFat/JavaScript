@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var arr = [5, 4, 6, 2, 1];
+    //从第二个开始往后
+    for (var i = 1; i < arr.length; i++) {
+        var temp = arr[i];
+        //从第i个 往前 只要比你小 就让你往后移 让第i个插到合适位置
+        for (var j = i - 1; j >= 0 && arr[j] > temp; j--) {
+            arr[j + 1] = arr[j];
+        }
+        arr[j + 1] = temp;
+    }
+    console.log(arr);
+
+</script>
+</body>
+</html>

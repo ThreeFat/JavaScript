@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //将一个数组中的值从小到大排列
+    var arr = [65, 97, 76, 13, 27, 49, 58];
+
+    //5个元素 比较4趟
+    //arr.length个元素 比较arr.length-1趟
+    for (var i = 0; i < arr.length - 1; i++) {//控制比较的趟数
+        //每一趟循环中 两两比较的次数
+        //5个元素比较4次
+        //arr.length个元素 比较arr.length-1
+        for (var j = 0; j < arr.length - 1; j++) {
+            //实质性的进行两两比较并交换
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+
+    //较大的元素 会通过比较 渐渐的"往上浮" 像气泡一样 所以叫冒泡排序
+    //现在数值少你一眼就看出来了 如果数值很多呢 还是让电脑处理快
+    var arr = [20, 10];//先说原理 原理很简单 如果前面的比后面的大 就交换
+    if (arr[1] > arr[2]) {
+        var temp = arr[1];
+        arr[1] = arr[2];
+        arr[2] = temp;
+    }
+    console.log(arr);
+    //如果是三个 怎么办？一趟够吗？Fw演示
+    //一趟比较好几次 然后还得来一趟 也就是一个双重for循环
+    //外层是趟数 内层是每一趟中相邻两项两两比较的次数
+    //原理现在大家都懂了 咱们来分析一下 具体比较多少趟 每趟多少次
+
+</script>
+</body>
+</html>

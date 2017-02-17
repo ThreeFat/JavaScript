@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //求任意数组中的最大值
+    function getMax(arr) {
+     var max = arr[0];
+     for (var i = 0; i < arr.length; i++) {
+     if (max < arr[i]) {
+     max = arr[i];
+     }
+     }
+     return max;
+     }
+     var arr = [1, 2, 3, 4, 5];
+     console.log(getMax(arr));
+    //求任意数组中的最小值
+    /*function getMin(arr) {
+     var min = arr[0];
+     for (var i = 0; i < arr.length; i++) {
+     if (min > arr[i]) {
+     min = arr[i];
+     }
+     }
+     return min;
+     }
+
+     console.log(getMin([1, 2, 3, 4, 5]));*/
+    //翻转任意数组，返回一个新的数组
+    /*function reverse(arr) {
+     var newArr = [];
+     for (var i = arr.length - 1; i >= 0; i--) {
+     newArr[newArr.length] = arr[i];
+     }
+     return newArr;
+     }
+     console.log(reverse([1, 2, 3, 4, 5]));*/
+
+    //对任意数组从小到大排序
+    function sort(arr) {
+        //趟数 arr.length个arr.length-1趟
+        for (var i = 0; i < arr.length - 1; i++) {//arr.length-1趟
+            var isSorted = true;//假设排好了
+            //每趟中两两比较的次数 arr.length-1次
+            for (var j = 0; j < arr.length - 1 - i; j++) {
+                //实质性的两两比较并交换
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    isSorted = false;
+                }
+            }
+            if (isSorted) {
+                break;
+            }
+        }
+        return arr;
+    }
+    console.log(sort([5, 4, 33, 2, 44]));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //交换两个变量的值
+    //不使用第三个变量交换两个数值类型变量的值
+    var a = 10;
+    var b = 20;
+
+    console.log(a);
+    console.log(b);
+    /*
+     a=10 b=20
+     a = b;//a=20 b=20
+     b = a;//a=20 b=20
+     */
+    /*
+     var temp = a;
+     a = b;
+     b = temp;
+     */
+
+
+    //a=10 b=20 a=A b=B
+    a = a + b;//a=30 b=20 a=A+B b=B
+    b = a - b;//a=30 b=10 a=A+B b=A
+    a = a - b;//a=20 b=10 a=B b=A
+
+    console.log(a);
+    console.log(b);
+
+
+</script>
+</body>
+</html>

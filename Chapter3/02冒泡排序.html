@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //把数组中的元素 从小到大排序
+    var arr = [5, 4, 3, 2, 1];//[4,3,2,1,5]
+    //外层循环控制的是比较的趟数 5个元素比较4趟 arr.length个arr.length-1趟
+    for (var i = 0; i < arr.length - 1; i++) {//arr.length-1趟
+        //每次循环两两比较的次数 5个元素比较4次 arr.length个arr.length-1次
+        for (var j = 0; j < arr.length - 1 - i; j++) {
+            //实质性的进行两两比较并交换
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+
+</script>
+</body>
+</html>
