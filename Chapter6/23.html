@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    function fn(){
+        var aaaaa = "a";//全局变量归全局对象 局部变量归谁了?
+        console.dir(fn);
+    }
+    fn();
+    console.log(window.aaaaa);
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .odd {
+            background-color: #999;
+        }
+
+        .even {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<ul id="beauty">
+    <li>西施</li>
+    <li>琳琳</li>
+    <li>小龙龙</li>
+    <li>苏东坡
+
+    </li>
+</ul>
+<script>
+    //奇数行一种颜色偶数行另一种颜色
+    var ul = document.getElementById("beauty");
+    var lis = ul.getElementsByTagName("li");
+    //把每一个li取出来设置相应的类名
+    for (var i = 0; i < lis.length; i++) {
+        //奇数行一种颜色偶数行另一种颜色
+        if (i % 2 === 0) {//i是偶数 到页面上对于用户来说就是奇数行
+            lis[i].className = "odd";
+        } else {
+            lis[i].className = "even";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box" aaa="1"></div>
+<script>
+    var box = document.getElementById("box");
+    console.log(box.id);
+    console.log(box.aaa);
+    //标签和对象的预定义属性会相互影响 自定义属性不会相互影响
+
+    //专门用来获取标签属性的方法 （任何属性都可以获取）
+    console.log(box.getAttribute("aaa"));//自定义属性可以获取
+    console.log(box.getAttribute("id"));//预定义属性也可以获取
+    //设置标签属性
+    box.setAttribute("bbb", "2");
+    box.setAttribute("class", "2");
+    //移除属性
+    box.removeAttribute("id");
+
+    //var teacher = {};
+    //teacher.name = "linlin";
+    //teacher.age = 18;
+
+
+</script>
+</body>
+</html>

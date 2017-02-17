@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #demo1 {
+            background-color: green;
+        }
+
+        #demo2 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div id="demo1"></div>
+<div id="demo2"></div>
+<script>
+    document.getElementById("demo1").onclick = function () {
+        //this.style.display = "none";//隐藏后 不占位置
+        //this.style.visibility = "hidden";//隐藏后 仍然占位置
+    };
+</script>
+</body>
+</html>

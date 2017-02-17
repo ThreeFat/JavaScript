@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="father">
+    <span id="son1">span1</span>
+    <span id="son2">span2</span>
+    <span>span3</span>
+    <span>span4</span>
+    <span>span5</span>
+
+    <p>我是p标签</p>
+</div>
+
+<script>
+    var div = document.getElementById("father");
+
+    //children没有兼容问题  这里只是为了讲解一下封装
+    //用childNodes模拟写出children
+    console.log(div.childNodes);
+    //    console.log(getChild(div));
+
+
+    function getChild(element) {
+        var childNodes = element.childNodes;
+        var arr = [];
+
+        for (var i = 0; i < childNodes.length; i++) {
+            if (childNodes[i].nodeType == 1) {
+                arr.push(childNodes[i]);
+
+            }
+        }
+
+        return arr;
+    }
+    console.log(getSpanChild(div));
+    function getSpanChild(element) {
+        var childNodes = element.childNodes;
+        var arr = [];
+
+        for (var i = 0; i < childNodes.length; i++) {
+            if (childNodes[i].nodeType == 1) {
+
+                if (childNodes[i].nodeName == "SPAN") {
+                    arr.push(childNodes[i]);
+                }
+            }
+        }
+
+        return arr;
+    }
+
+    function getPreviousElement(element) {
+
+        if (element.previousElementSibling) {
+            return element.previousElementSibling;
+        } else {
+            var pre = element.previousSibling;
+
+            while (pre && pre.nodeType !== 1) {
+                pre = pre.previousSibling;
+            }
+            return pre;
+        }
+
+    }
+
+    function getNextElement(element) {
+        if (element.nextElementSibling) {
+            return element.nextElementSibling;
+        } else {
+            var next = element.nextSibling;
+            while (next && next.nodeType !== 1) {
+                next = next.nextSibling;
+            }
+            return next;
+        }
+    }
+
+
+    function getCSS(element) {
+
+//        if(element.currentStyle){
+//            return element.currentStyle;
+//        }else{
+//            return getComputedStyle(element);
+//        }
+
+        return element.currentStyle ? element.currentStyle : getComputedStyle(element);
+
+
+    }
+    //
+    //    console.log(a());
+    //    var a=1;
+
+    //    var tool=new Object()
+    var tool = {
+        author: '吴彦祖',
+        version: '1.0.1',
+        getChild: function (element) {
+            var childNodes = element.childNodes;
+            var arr = [];
+            for (var i = 0; i < childNodes.length; i++) {
+                if (childNodes[i].nodeType == 1) {
+                    arr.push(childNodes[i]);
+
+                }
+            }
+            return arr;
+        }
+    };
+    console.log(111);
+    console.log(tool.getChild(div));
+
+
+</script>
+</body>
+</html>

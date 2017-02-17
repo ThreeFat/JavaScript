@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #list li {
+            list-style-type: none;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background-color: beige;
+            text-align: center;
+            float: left;
+            margin-left: 5px;
+        }
+
+        #list li.current {
+            background-color: burlywood;
+        }
+
+        #list li a {
+            text-decoration: none;
+        }
+
+        .odd {
+            background-color: #ccc;
+        }
+
+        .even {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul id="list">
+        <li class="current"><a href="javascript:void(0)">首页</a></li>
+        <li><a href="javascript:void(0)">播客</a></li>
+        <li><a href="javascript:void(0)">博客</a></li>
+        <li><a href="javascript:void(0)">相册</a></li>
+        <li><a href="javascript:void(0)">关于</a></li>
+        <li><a href="javascript:void(0)">帮助</a></li>
+    </ul>
+</div>
+<script>
+    //点击当前li 当前li排他
+    var ul = document.getElementById("list");
+    var nodes = ul.childNodes;//子节点
+    //把每一个子节点取出来 做相应的处理
+    for (var i = 0; i < nodes.length; i++) {
+        if (nodes[i].nodeType !== 1) {//不是元素节点
+           continue;//跳出本次循环
+        }
+        //能够到达这里的是元素 给元素绑定 排他的 事件
+        nodes[i].onclick = function () {
+            //干掉所有人
+            for (var j = 0; j < nodes.length; j++) {
+                if (nodes[j].nodeType !== 1) {
+                    continue;
+                }
+                //是元素
+                //nodes[j].removeAttribute("class");
+                nodes[j].className = "";
+            }
+            //留下我自己
+            this.setAttribute("class", "current");
+            //this.className = "current";
+        };
+    }
+</script>
+</body>
+</html>

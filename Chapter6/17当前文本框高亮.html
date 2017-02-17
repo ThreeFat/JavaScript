@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box">
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+</div>
+<script>
+    //当前文本框高亮
+    var box = document.getElementById("box");
+    var inputs = box.children;
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].onfocus = function () {
+
+            //先干掉所有人
+//            for(var j=0;j<inputs.length;j++){
+//                inputs[j].style.backgroundColor="";
+//            }
+
+
+            this.style.backgroundColor = "red";
+        };
+        //同一个浏览器获取焦点的只能是一个表单元素
+        //当前这个获取焦点后 其他的就自动失去焦点了
+        inputs[i].onblur = function () {
+            this.style.backgroundColor = "";
+        };
+    }
+
+</script>
+</body>
+</html>

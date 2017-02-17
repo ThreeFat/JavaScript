@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>aaa</title>
+    <style>
+    </style>
+</head>
+<body>
+<input type="button" value="关灯" id="btn"/>
+<script>
+    //找人
+    var btn = document.getElementById("btn");
+    var isOpen = true;//标记 灯是开着的
+
+    //console.log(document.head);
+    //console.log(document.title);
+    console.dir(document.body);
+    console.dir(document.body.style);//style是body的属性 这个属性也是对象
+    //style对象的属性 对应的就是样式属性 只不过命名是JS的命名规范
+    //background-color 样式表中的写法
+    //backgroundColor 脚本中的写法
+    //点击按钮关灯
+    btn.onclick = function () {
+        if (isOpen) {
+            document.body.style.backgroundColor = "black";
+            this.value = "开灯";
+            //isOpen = false;
+        } else {
+            document.body.style.backgroundColor = "white";
+            this.value = "关灯";
+            //isOpen = true;
+        }
+        isOpen = !isOpen;
+    };
+
+</script>
+</body>
+</html>

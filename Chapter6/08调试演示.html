@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div id="demo"></div>
+    后面有个文本节点
+</div>
+<script>
+    var demo = document.getElementById("demo");
+    console.log(getNextElement(demo));
+
+    //封装 获取下一个兄弟元素 的兼容方法
+    function getNextElement(element) {
+        if (element.nextElementSibling) {//能找到
+            return element.nextElementSibling;
+        } else {
+            var next = element.nextSibling;//下一个兄弟节点
+            while (next && 1 !== next.nodeType) {//有 并且 不是我们要的
+                next = next.nextSibling;
+            }
+            return next;
+        }
+    }
+</script>
+</body>
+</html>

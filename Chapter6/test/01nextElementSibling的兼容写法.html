@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>兼容</title>
+</head>
+<body>
+<div id="div1">111</div>
+<div id="div2">222</div>
+<script type="text/javascript">
+    var oDiv = document.getElementById('div1');
+
+    var oDiv2 = oDiv.nextElementSibling || nextElementSibling(oDiv);
+    alert(oDiv.nextElementSibling.innerHTML);
+   alert(oDiv2.innerHTML);
+
+    function nextElementSibling(el) {
+        do {
+            el = el.nextSibling;
+        } while (el && el.nodeType !== 1);
+        return el;
+    }
+</script>
+</body>
+</html>

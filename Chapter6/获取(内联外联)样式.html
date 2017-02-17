@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    var box = document.getElementById("box");
+    //通过style设置的是行内样式
+    //通过style只能获取行内样式 数据类型是字符串 而且如果属性值有单位 这里也会有单位
+    console.log(getStyle(box).width);
+    //通过currentStyle与getComputedStyle()兼容写法获取样式
+    //能获取但是不能修改内联外联样式，只能通过行内样式style属性去修改
+    function getStyle(element) {
+        if (element.currentStyle) {
+            return element.currentStyle;
+        } else {
+            return getComputedStyle(element);
+        }
+
+
+        // 三元写法return obj.currentStyle ? obj.currentStyle : getComputedStyle(obj, false);
+    }
+
+
+    //一定要记得如果有单位要加单位
+
+    //两种方式 1通过类名设置样式 2通过style属性设置样式
+    //哪个简单用哪个(如果样式多 就用类名 如果样式少就直接设置)
+
+    //其实从结构样式行为分离的原则来讲即使是样式少也应该用类名
+    //那通过style来设置还有什么必要呢？
+    //有些情况必须通过style来设置（一些需要计算的情况）
+
+
+</script>
+</body>
+</html>
