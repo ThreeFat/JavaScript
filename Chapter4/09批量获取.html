@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" id="btn" value="按钮"/>
+<input type="button"  class="a"  value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<p class="a"></p>
+<script>
+    //通过id获取一个元素
+    var btn = document.getElementById("btn");
+    console.log(btn);
+    //批量获取元素
+    //通过标签名获取元素
+    var inputs = document.getElementsByTagName("input");
+    console.log(inputs);//不是数组 没有数组中的内置方法
+    //像这样 属性名是数值 而且有length属性 但是本质上不是数组的 对象 我们叫他伪数组
+    var arr = [1, 2, 3];
+    console.log(arr);
+
+    //getElement获取到的都是元素对象
+    //getElements获取到的都是伪数组
+
+
+//    console.log(document.getElementsByClassName("a"));
+
+
+    //伪数组 相当于 冰箱
+    //元素对象 相当于 冰糕\
+
+
+//    function a(){
+//        console.log(this);
+//    }
+//    a();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" id="btn" value="按钮"/>
+<script>
+    //找人
+    var btn = document.getElementById("btn");
+    //<标签 事件="事件处理程序" >
+    //事件源.事件 = function(){ 事件处理程序 };
+    btn.onclick = function () {
+        //alert("别点我");
+        //console.log(btn);
+        console.log(this);
+    };
+
+
+</script>
+</body>
+</html>

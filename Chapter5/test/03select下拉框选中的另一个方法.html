@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<select name="fanpai" id="sel">
+    <option value="xs">西施</option>
+    <option value="dc">貂蝉</option>
+    <option value="zj">昭君</option>
+    <option value="ll" id="ll">琳琳</option>
+</select>
+<input type="button" id="btn" value="翻牌儿"/>
+<script>
+    //
+    var btn = document.getElementById("btn");
+    var ll = document.getElementById("ll");
+    btn.onclick = function(){
+         var sel = document.getElementById("sel");
+         sel.value='ll';//dc被选中
+    }
+    
+    
+</script>
+</body>
+</html>

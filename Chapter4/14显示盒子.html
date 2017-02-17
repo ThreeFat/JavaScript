@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .cls {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="显示" id="btn"/>
+
+<div id="box"></div>
+<script>
+    //点击按钮让盒子显示
+    var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    btn.onclick = function () {
+        //特殊 class 在js中是保留字 所以这里用的是className
+        box.className = "cls";
+    };
+
+</script>
+</body>
+</html>

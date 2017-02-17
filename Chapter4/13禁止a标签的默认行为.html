@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--next-->
+<!--previous-->
+<!--first-->
+<!--last-->
+<!--parent-->
+<!--child-->
+<!--sibling-->
+<a href="http://www.baidu.com">a标签的默认行为就是跳转</a>
+<a href="http://www.baidu.com" onclick="return false;">想要阻止默认行为 return false 即可</a>
+<a href="http://www.baidu.com" onclick="return false;">return false</a>
+<a href="http://www.baidu.com" onclick="return test(20);">未满十八岁不得入内</a>
+<a href="http://www.baidu.com" id="demo">demo</a>
+<a href="javascript:void(0);" id="demo2">demo2</a>
+<a href="javascript:;" id="demo2">demo3</a>
+<a href="#" id="demo4">demo4</a>
+<script>
+    var demo = document.getElementById("demo");
+    var demo2 = document.getElementById("demo2");
+    demo2.onclick = function () {
+        alert("a");
+    };
+    //<标签 事件=" 事件处理程序 ">
+    //事件源.事件 = function(){ 事件处理程序 };
+    demo.onclick = function () {
+        //return test(17);
+        return false;
+    };
+
+    var demo4 = document.getElementById('demo4');
+
+    demo4.onclick = function () {
+        event.preventDefault();
+    };
+
+    function test(age) {
+        if (age >= 18) {
+            alert("欢迎");
+        } else {
+            alert("走开");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="demo1">
+    <input type="button" value="按钮"/>
+    <input type="button" value="按钮"/>
+    <input type="button" value="按钮"/>
+</div>
+<div id="demo2">
+    <input type="button" id="btn" value="按钮"/>
+    <input type="button" value="按钮"/>
+    <input type="button" value="按钮"/>
+</div>
+<script>
+    var btn = document.getElementById("demo2");
+    var inputs = document.getElementsByTagName("input");
+    //getElementsByTagName 可以被 document调用 表示获取页面上所有这类标签
+    var inputs = btn.getElementsByTagName("input");
+    //getElementsByTagName 还可以被普通的元素对象调用表示获取这个对象内部所有的这类标签
+    var btn = btn.getElementById("btn");
+    //getElementById 只能被document调用 因为页面上id是唯一的
+    console.log(btn);
+    console.log(inputs);
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+  
+</head>
+<body>
+<input type="text" value="母婴会场" id="txt" style="color: red;" />
+<input type="button" value="搜索"/>
+<script>
+    //文本框获取焦点的时候 如果是默认文字就清空
+    var txt = document.getElementById("txt");
+    //获取焦点事件
+    txt.onfocus = function () {
+        //如果是默认文字就清空
+        console.log(this.style.color);
+        if (this.value === "母婴会场"&&this.style.color=='red') {
+            this.value = "";
+        }
+    }
+    //失去焦点的时候 如果没有文字 加上默认文字
+    txt.onblur = function () {
+        //如果没有文字 加上默认文字
+        //if(this.value === "")
+        this.style.color='blue';
+        if (this.value.length === 0) {
+            this.value = "母婴会场";
+        }
+    }
+</script>
+</body>
+</html>

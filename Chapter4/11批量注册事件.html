@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<script>
+    //批量获取元素
+    var inputs = document.getElementsByTagName("input");
+
+    /*inputs.onclick = function () {
+     alert("a");
+     };*/
+    //虽然是伪数组 但是 1有lenght 2属性是从0开始的数值  i=5
+    for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];//每一个按钮
+        //事件源.事件 = function(){ 事件处理程序 };
+        input.onclick = function () {
+            //alert("a");
+            console.log(this);
+//            alert(i);
+        };
+    }
+
+
+    //伪数组 冰箱
+    //元素对象 冰糕
+
+</script>
+</body>
+</html>

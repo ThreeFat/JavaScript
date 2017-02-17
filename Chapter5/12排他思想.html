@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .current {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<script>
+    //点击当前按钮 只让当前按钮亮起来
+    var inputs = document.getElementsByTagName("input");
+    //给每一个都绑定事件
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].onclick = function () {
+            //让当前按钮亮起来
+            //this.className = "highlight";
+            //排他思想:干掉所有人留下我自己
+            //干掉所有人 让所有人的类名是空
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].className = "";
+                inputs[i].value="按钮";
+            }
+            //留下我自己 让当前这个的类名变为highlight
+            this.className = "current";
+            this.value="点了";
+        };
+    }
+</script>
+</body>
+</html>

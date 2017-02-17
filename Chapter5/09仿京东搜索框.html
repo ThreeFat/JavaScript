@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" value="奶爸盛典" id="txt"/>
+<button>搜索</button>
+<script>
+    //placeholder 占位 旧版浏览器不支持 新版即使支持 不同浏览器业务逻辑不一样
+    //我们自己来实现这个业务逻辑
+
+
+    //找人
+    var txt = document.getElementById("txt");
+    //文本框获取焦点事件 onfocus
+    txt.onfocus = function () {
+        //txt.value = "";
+        //如果用户没有输入 才清空
+        if (this.value === "奶爸盛典") {
+            this.value = "";
+        }
+    };
+    //文本框失去焦点 onblur
+    txt.onblur = function () {
+        //如果用户没有输入了文字 失去焦点后 才把默认文字加上
+        if (this.value === "") {
+            this.value = "奶爸盛典";
+        }
+    };
+</script>
+</body>
+</html>

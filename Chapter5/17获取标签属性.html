@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .cls {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="box" aaa="1"></div>
+<!--id是规定好的标签属性 aaa是自定义属性-->
+<script>
+
+    //点语法  HTML DOM语法
+    var box = document.getElementById("box");
+    //console.log(box.id);//预先规定好的标签属性 可以映射到对象身上
+    //console.log(box.aaa);//预先没有规定的标签属性 无法映射到对象身上
+    //ie678特殊 标签中的自定义属性也可以影响到对象（这样的设计思路是不对的）
+    //1. 获取标签属性 (所有的标签属性都可以获取)
+    //console.log(box.getAttribute("id"));//预先规定好的标签属性 可以获取的
+    //console.log(box.getAttribute("aaa"));//预先没规定的标签属性 也可以获取的
+
+//    box.bbb = "2";//标签和对象的自定义属性 不会相互影响(IE678除外)
+    //console.log(box.bbb);//给对象设置的自定义属性 从对象身上可以获取
+    //但是无法影响标签
+
+
+    //核心dom方法
+    //2. 设置标签属性(所有的标签属性都可以设置)
+//    box.setAttribute("id", "aaa");//有规定的可以设置
+//    box.setAttribute("bbb", "2");//没规定的也可以设置
+
+    //box.className = "cls";
+    //box.setAttribute("class", "cls");
+
+    //3. 移除标签属性(所有的标签属性都可以移除)
+    //box.removeAttribute("aaa");
+    //box.removeAttribute("id");
+
+
+</script>
+</body>
+</html>

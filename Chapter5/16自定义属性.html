@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box" aaa="1"></div>
+<!--id是规定好的标签属性 aaa是自定义属性-->
+<script>
+    var box = document.getElementById("box");
+    console.log(box.id);//预先规定好的标签属性 可以映射到对象身上
+    console.log(box.aaa);//预先没有规定的标签属性 无法映射到对象身上
+    //ie678特殊 标签中的自定义属性也可以影响到对象（这样的设计思路是不对的）
+
+</script>
+</body>
+</html>

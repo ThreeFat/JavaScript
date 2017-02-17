@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //函数 对象
+    function fn(arg1, arg2) {
+        var a = arg1 + arg2;
+        //console.log(a);
+        return a;
+    }
+    //fn(1);
+    //对象
+    var obj = new Object();
+    //对象.属性 = 值
+    obj.name = "zs";
+    console.log(obj.name);
+    //方法
+    obj.sayHi = function () {
+        //console.log("我是" + obj.name);
+        console.log("我是" + this.name);
+    };
+    //对象方法中的this 指向当前这个方法所属的对象
+    obj.sayHi();
+
+    //对象字面量
+    var obj2 = {
+        name: "zs",
+        age: 18,
+        sayHi: function () {
+            console.log("我是" + this.name);
+            //console.log("我是" + obj2.name);
+        }
+    };
+
+</script>
+</body>
+</html>

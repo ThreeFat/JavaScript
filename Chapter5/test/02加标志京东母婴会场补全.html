@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+  
+</head>
+<body>
+<input type="text" value="母婴会场" id="txt" />
+<input type="button" value="搜索"/>
+<script>
+    //文本框获取焦点的时候 如果是默认文字就清空
+    var txt = document.getElementById("txt");
+    var isfirst=true;
+    //获取焦点事件
+    txt.onfocus = function () {
+        //如果是默认文字就清空
+        //
+        // console.log(this.style.color);
+        if (this.value === "母婴会场"&&isfirst==true) {
+            this.value = "";
+        }
+    }
+    //失去焦点的时候 如果没有文字 加上默认文字
+    txt.onblur = function () {
+        //如果没有文字 加上默认文字
+        //if(this.value === "")
+        //失去焦点后除非重新刷新页面否则都算是第一次已经过了所以将isfirst设置为false
+        // isfirst=false;
+        if (this.value.length === 0) {
+            this.value = "母婴会场";
+        }
+    }
+
+    txt.onkeyup=function(){
+    	if(this.value=="母婴会场"){
+    		isfirst=false;
+    	}
+    }
+</script>
+</body>
+</html>

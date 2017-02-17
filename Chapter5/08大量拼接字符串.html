@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="demo">
+    <input type="text" id="txt"/>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+</div>
+<input type="button" id="btn" value="取值"/>
+<script>
+    var btn = document.getElementById("btn");
+    var demo = document.getElementById("demo");
+    var inputs = demo.getElementsByTagName("input");
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = i;
+    }
+    //大量拼接字符串很消耗性能
+    //大量拼接字符串用数组
+    //所谓的大量 得上万 这里只是演示一下原理
+    btn.onclick = function () {
+        var arr = [];
+        for (var i = 0; i < inputs.length; i++) {
+            //console.log(inputs[i].value);
+            arr.push(inputs[i].value);
+        }
+        console.log(arr.join("-"));
+        //join可以把数组中的字符串拼接
+        //如果不传参 默认按照 , 拼接
+    };
+    //把文本框中的值批量取出来 然后拼接成用-分割的字符串
+
+
+</script>
+</body>
+</html>

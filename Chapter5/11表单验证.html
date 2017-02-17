@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .highlight {
+            background-color: red;
+        }
+
+        #test{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="txt"/>
+<div id="test"></div>
+<input type="button" value="注册" id="btn"/>
+<script>
+    //点击注册后 验证文本框中的内容 如果符合要求就想后台发送数据
+    var txt = document.getElementById("txt");
+    var btn = document.getElementById("btn");
+    btn.onclick = function () {
+        //验证文本框中的内容 如果符合要求就想后台发送数据
+        //要求 用户名必须在3-6位之间
+        if (txt.value.length < 3 || txt.value.length > 6) {
+//            alert("用户名必须在3-6位之间");
+            var div1=document.getElementById("test");
+            div1.innerHTML="用户名必须在3-6位之间";
+
+            txt.className = "highlight";
+            return;
+        } else {
+            txt.className = "";
+        }
+
+        alert("想后台发送数据");
+    };
+
+</script>
+</body>
+</html>

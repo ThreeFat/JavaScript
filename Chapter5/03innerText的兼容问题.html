@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<script>
+    var box = document.getElementById("box");
+
+    //console.log(box.innerText);
+    //console.log(box.textContent);
+    //chrome两个都支持
+    //FF 新版的两个都支持 旧版的只支持textContent
+    //IE 新版的两个都支持 旧版的只支持innerText
+
+    //通过判断浏览器来实现兼容检测 代理检测（我们很少用因为不同的浏览器太多了）
+    //通过判断当前浏览器的能力来实现兼容检测 能力检测
+
+    //box.innerText 是对象的属性 对象如果没有这个属性 此时的值是undefined
+    //是undefined 转化成布尔值是false
+    //特殊情况 浏览器有innerText属性 但是当前元素的innerText里面是空字符串
+    //""转化成布尔值是false
+    if (box.innerText) {
+        console.log(box.innerText);
+    } else {
+        console.log(box.textContent);
+    }
+
+    if (typeof box.innerText === "string") {
+        console.log(box.innerText);
+    } else {
+        console.log(box.textContent);
+    }
+
+
+    //获取内部文本的兼容方法
+    function getInnerText(element) {
+        if (typeof element.innerText === "string") {
+            return element.innerText;
+        } else {
+            return element.textContent
+        }
+    }
+
+
+</script>
+</body>
+</html>

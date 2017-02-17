@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn1" value="全选"/>
+<input type="button" id="btn2" value="不选"/>
+<input type="button" id="btn3" value="反选"/>
+
+<div class="wrap">
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="j_cbAll"/>
+            </th>
+            <th>菜名</th>
+            <th>饭店</th>
+        </tr>
+        </thead>
+        <tbody id="j_tb">
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>红烧肉</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>西红柿鸡蛋</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>红烧狮子头</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>日式肥牛</td>
+            <td>田老师</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    //展示checked属性
+    var all = document.getElementById("j_cbAll");
+    var btn1 = document.getElementById("btn1");//全选
+    var btn2 = document.getElementById("btn2");//不选
+    var btn3 = document.getElementById("btn3");//反选
+    var tbody = document.getElementById("j_tb");
+    var checkboxes = tbody.getElementsByTagName("input");//下面的单选框
+    //console.dir(all);
+    //checked 被选中 true被选中 false不被选中
+    //all.checked = true;
+
+    //获取表身里面所有的单选框  并根据按钮做相应的操作
+
+    //1.点击btn1让下面所有的checkboxes被选中
+    btn1.onclick = function () {
+        //让下面所有的checkboxes被选中
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = true;//都选中
+        }
+    };
+    //2.点击btn2让下面所有的checkboxes都不选中
+    btn2.onclick = function () {
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = false;//不选中
+        }
+    };
+    //3.点击btn3让下面所有的checkboxes的选中状态反转
+    btn3.onclick = function () {
+        for (var i = 0; i < checkboxes.length; i++) {
+
+//            if(checkboxes[i].checked){
+//                checkboxes[i].checked=false;
+//            }else{
+//                checkboxes[i].checked=true;
+//            }
+            checkboxes[i].checked = !checkboxes[i].checked;
+        }
+    };
+
+</script>
+</body>
+</html>

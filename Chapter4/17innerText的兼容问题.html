@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<script>
+    var box = document.getElementById("box");
+    //box.innerText = "aaaa";
+    //box.textContent = "aaaa";
+    //chrome 两个都支持
+    //FF 新版的都支持 旧版只支持textContent
+    //IE 新版的都支持 旧版只支持innerText
+
+    //判断浏览器来做兼容处理的 叫做 代理检测（很少用）
+    //判断浏览器是否支持这个方法 叫做 能力检测
+    //console.log(box.innerText);
+    /*if (typeof box.innerText === "string") {
+     console.log(box.innerText);
+     } else {
+     console.log(box.textContent);
+     }*/
+
+    console.log(getInnerText(box));
+
+    //封装
+    function getInnerText(element) {
+        if (typeof element.innerText === "string") {
+            return element.innerText;
+        } else {
+            return element.textContent;
+        }
+    }
+
+    setInnerText(box, "bbbbbbb");
+
+    function setInnerText(element, content) {
+        if (typeof element.innerText === "string") {
+            element.innerText = content;
+        } else {
+            element.textContent = content;
+        }
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

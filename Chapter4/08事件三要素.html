@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" id="btn" onclick="alert('a')" value="按钮"/>
+<script>
+    //找人
+    var btn = document.getElementById("btn");
+
+    //点击按钮 弹出警告
+    //事件三要素 事件源 事件 事件处理程序
+    //          按钮   点击   弹出警告
+    //<标签 事件=" 事件处理程序 ">
+    //事件源.事件 = function(){ 事件处理程序 };
+    btn.onclick = function () {
+        //事件处理程序 弹出警告
+        alert("哈哈");
+    };
+
+
+</script>
+</body>
+</html>

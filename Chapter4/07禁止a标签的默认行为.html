@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<a href="http://www.baidu.com">a标签的默认行为就是跳转</a>
+<a href="http://www.baidu.com" onclick="return false;">想要阻止默认行为 return false 即可</a>
+<a href="http://www.baidu.com" onclick="return false;">return false</a>
+<a href="http://www.baidu.com" onclick="return test(20);">未满十八岁不得入内</a>
+<script>
+    function test(age) {
+        if (age >= 18) {
+            alert("欢迎");
+        } else {
+            alert("走开");
+            return false;
+        }
+    }
+    //协议
+    //http协议 https协议 ftp协议
+
+
+    //这里必须是return false 其他的都不行
+    //0 "" 这些都不行 这些都是在做布尔运算的时候 会转换成false 但是他们本身不是false
+
+    //# 会跳转到顶部 将来要跳转到其他页面可以用#先占位
+
+    //javascript:; 将来要执行一些JS程序 可以用这个先占位
+    //javascript:void(0);
+    //什么都不做了
+
+    //通过JS控制 想让他跳转他就跳转 不想让他跳转就不跳转 更灵活
+
+
+</script>
+</body>
+</html>

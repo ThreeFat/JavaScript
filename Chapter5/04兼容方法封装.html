@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<script>
+    var box = document.getElementById("box");
+    //console.log(getInnerText(box));
+    setInnerText(box, "<h1>aaaa</h1>");
+
+    //获取内部文本的兼容方法
+    function getInnerText(element) {
+        if (typeof element.innerText === "string") {
+            return element.innerText;
+        } else {
+            return element.textContent
+        }
+    }
+
+    //设置内部文本的兼容方法
+    function setInnerText(element, content) {
+        if (typeof element.innerText === "string") {
+            element.innerText = content;
+        } else {
+            element.textContent = content;
+        }
+    }
+
+    //设置文本的时候
+    //如果希望设置的是内部的结构 用innerHTML
+    //如果希望设置的是纯文本
+    //如果设置的东西就是纯文本 可以直接用innerHTML（没有兼容问题）
+    //如果设置的东西是符合标签规则的文本 而你不想把他变为标签
+    //那么此时就得用 setInnerText了
+
+
+</script>
+</body>
+</html>
