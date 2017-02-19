@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" id="btn" value="创建"/>
+
+<div id="box"></div>
+<script>
+    //点击按钮 box里 创建文本框
+    var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    btn.onclick = function () {
+
+//        box.innerHTML="";
+        var input = document.getElementById("t");
+        console.log(input);
+//        //如果获取到了 是一个对象 如果获取不到是null
+        if (input) {//如果获取到了就是对象 对象转换成布尔值是true
+            return;//能进来 说明页面上已经有了 就不再重复创建了
+        }
+        input = document.createElement("input");
+        input.type = "text";
+        input.id = "t";
+        box.appendChild(input);
+    };
+
+</script>
+</body>
+</html>

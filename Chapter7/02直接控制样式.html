@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="demo" style="width: 100px;height: 100px;"></div>
+<input type="button" id="btn" value="变大两倍"/>
+<script>
+    var demo = document.getElementById("demo");
+    var btn = document.getElementById("btn");
+    console.log(demo.style);
+
+    btn.onclick = function () {
+        var w=demo.style.width;//100px
+        var h=demo.style.height;//100px
+//        console.log(w);
+        w=parseInt(w);
+        h=parseInt(h);
+//        console.log(w);
+        var w2=w*2;
+        var h2=h*2;
+//        console.log(w2);
+
+
+        demo.style.width=w2+'px';
+        demo.style.height=h2+'px';
+    };
+
+
+    //style属性也是一个对象 这个对象里面有很多属性 这些属性和样式属性是对应的
+    //通过style属性 只能获取行内样式 数据类型是字符串 而且有单位
+    //通过style属性 只能设置行内样式 在给style属性中的样式属性赋值的时候 注意
+    //1.是字符串 2.如果有单位要加单位 3.一定注意只要值（注意别多加分号）
+    //4.设置路径的时候 值很容易写错 所以可以先在CSS里试一下 另外路径是以标签为准
+
+
+</script>
+</body>
+</html>

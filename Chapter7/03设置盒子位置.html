@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*设置位置一定要记得加定位*/
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn" value="走你"/>
+
+<div id="box"></div>
+<script>
+    //点击按钮 让盒子往下走点
+    //找人
+    var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    btn.onclick = function () {
+        box.style.left = "200px";
+        box.style.top = "200px";
+    };
+
+
+</script>
+</body>
+</html>
