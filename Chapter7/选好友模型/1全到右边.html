@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        select {
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<select name="" id="all" multiple="multiple">
+    <option value="">西施</option>
+    <option value="">琳琳</option>
+    <option value="">小龙龙</option>
+    <option value="">苏东坡</option>
+</select>
+<input type="button" id="btn1" value="&gt;&gt;"/>
+<input type="button" id="btn2" value="&lt;&lt;"/>
+<input type="button" id="btn3" value="&gt;"/>
+<input type="button" id="btn4" value="&lt;"/>
+<select name="" id="sel" multiple="multiple"></select>
+<script>
+    //找人
+    //var btn1 = document.getElementById("btn1");
+    //var btn1 = $("btn1");
+
+    //通过id获取元素的函数
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    //点击btn1  把左边的都放到右边
+    $("btn1").onclick = function () {
+        var all = $("all");//左边的
+        var sel = $("sel");//右边的
+        var options = all.children;
+        for (var i = 0; i < options.length; i++) {
+            var option = options[i];//每一个选项
+            sel.appendChild(option);//放到右边去
+            i--;
+        }
+    };
+
+    $("btn2").onclick = function () {
+        var all = $("all");//左边的
+        var sel = $("sel");//右边的
+        var options=sel.children;
+        for(var i=0;i<options.length;i++){
+            var option=options[i];
+            all.appendChild(option);
+            i--;
+
+        }
+
+
+    };
+
+</script>
+</body>
+</html>
