@@ -1,2 +1,1 @@
-## javascript
-javascript基础
+## javascript基础和进阶
