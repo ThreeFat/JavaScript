@@ -1,0 +1,11 @@
+##  第十章   
+>   主要知识点     
+  1. Window对象
+  2. 定时器setTimeout
+  3. 定时器setInterval
+  4. location对象
+  5. navigator对象
+  6. history对象
+  7. screen对象
+  8. Date对象
+  9. Math对象
