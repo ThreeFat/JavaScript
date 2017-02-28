@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function Student(name, age, sex, score) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.score = score;
+    }
+    Student.prototype.sayHi = function () {
+        console.log("大家好我叫" + this.name + "我今年" + this.age);
+    };
+
+    var stu1 = new Student("zs", 18, 1, 100);
+    var stu2 = new Student("ls", 8, 1, 10);
+
+    stu1.sayHi();
+    stu2.sayHi();
+    console.log(stu1.sayHi === stu2.sayHi);
+    console.log(stu1);
+    //通过原型属性 把公共的方法只保存一份 可以节省资源
+    //prototype 是 构造函数的 原型属性
+    //__proto__ 是 对象 的 原型属性
+    //__proto__ 一环套一环 形成了一个链条 这就是原型链 通过原型链可以让它现原形
+
+
+</script>
+</body>
+</html>

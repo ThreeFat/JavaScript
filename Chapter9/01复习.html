@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    //声明提升
+    /*console.log(num);//undefined
+     fn();
+     var num = 10;
+     function fn() {
+     console.log("fn");
+     }
+     console.log(num);
+     fn();*/
+
+    //全局作用域 局部作用域
+    //全局变量 局部变量
+    /*var a = "a";//全局变量
+     console.log(a);
+     function fn() {
+     console.log(a);
+     var b = "b";//局部变量
+     console.log(b);
+     c = "c";//特殊 函数内部没加var声明的 是全局变量
+     }
+     fn();
+     console.log(b);//报错
+     console.log(c);//可以使用*/
+
+    //递归
+    /*var i = 0;
+     function fn() {
+     console.log("fn");
+     i++;
+     if (i < 10) {
+     fn();
+     }
+     }
+     fn();*/
+
+    // 回调
+    /*function callback() {
+        console.log("callback");
+    }
+    function fn(a) {
+        //console.log(a);
+        a();
+    }*/
+    //fn(callback);
+    /*fn(function () {
+        console.log("匿名函数");
+    });*/
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    //基本类型做参数
+    var num = 50;
+    function f1(num) { //此处的num是形参
+
+        num = 60; //方法的参数是局部变量
+        console.log(num);//60
+    }
+    f1(num);//此处的num是实参 会把num的值赋值一份传递给函数内部
+    console.log(num);//50
+
+
+   /* function Student() {
+        this.name = "aaa";
+        this.age = 15;
+        this.sayHi = function () {
+            console.log("sayHi");
+
+        }
+
+    }
+
+    var stu1 = new Student();
+
+    //    stu1.name
+
+    //    stu1.sayHi()
+
+    Student.prototype.study = function () {
+        console.log("study");
+    }
+
+    var stu2 = new Student();// __proto__
+
+    stu2.study();
+*/
+
+</script>
+</body>
+</html>
