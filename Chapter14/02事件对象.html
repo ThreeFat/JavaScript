@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // 实际上 事件发生的时候 是浏览器让我们注册的这个函数执行的
+    // 浏览器在调用这个函数的时候 会传入一个参数 这个参数就包含了和这个事件相关的很多信息
+    // 事件对象 -> event对象 它在事件触发之后传递 其中包含了许多的信息比如
+    // client page screen
+    // client -> 包含事件触发时在客户端位置 -> 浏览器中
+    // page -> 包含事件触发时在页面位置 -> 页面结构的具体位置中
+    // screen -> 包含事件触发时在设备屏幕上的位置 -> 整个屏幕中
+    document.onclick = function (a) {
+        // alert("a");
+        // alert(a);
+        console.log(a);
+    };
+
+    // 形参和实参可以不一致 如果传入了实参没有形参接收 也不会出错 只是实参就废了
+    function cl() {
+        console.log("哈哈哈");
+    }
+    // cl();
+    // cl("呵呵呵");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul id="father"></ul>
+<!--<script src="jQuery.js"></script>-->
+<script>
+    var ul = document.getElementById("father");
+    var lis = ul.children;
+    //var lis = ul.getElementsByTagName("li");
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onclick = function () {
+            alert("直接绑定的事件");
+        };
+    }
+    //页面加载的时候无法获取后来动态生成的结构 所以无法去注册事件
+    //1要委托事件的父元素 2事件类型 3事件能发生在哪些标签上 4发生事件后要执行的函数
+    on(ul, "click", "li", function () {
+        //alert("委托的事件");
+        console.log(this);
+        this.style.backgroundColor = "red";
+    });
+
+    //on的原理
+    function on(element, type, selector, fn) {
+        //element.onclick
+        element["on" + type] = function (event) {
+            //var event = event || window.event;
+            //console.log(event);
+            if (event.target.tagName === selector.toUpperCase()) {
+                event.target.fn = fn;
+                event.target.fn();
+                //Object.prototype.toString.call()
+            }
+        };
+
+    }
+
+
+    //在某些情况发生后 我们动态创建一些结构
+    for (var j = 0; j < 10; j++) {
+        var li = document.createElement("li");
+        li.innerHTML = j + 1;
+        ul.appendChild(li);
+    }
+
+</script>
+</body>
+</html>
