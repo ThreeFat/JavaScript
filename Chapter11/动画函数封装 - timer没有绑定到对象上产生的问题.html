@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            background: blueviolet;
+            position: absolute;
+            top:200px;
+        }
+    </style>
+</head>
+<body>
+<p>两个对象的运动会相互影响 ：box1和box2两个盒子都使用了animate，目标都是900，如果其中一个盒子正在运动，突然点击另一个按钮，第一个盒子的定时器就被清除了，就无法继续运动了。</p>
+<button id="btn1">box1跑到900</button>
+<button id="btn2">box2跑到900</button>
+<div id="box1"></div>
+<div id="box2"></div>
+<script>
+    //获取DOM对象
+    var btn1=document.getElementById("btn1");
+    var btn2=document.getElementById("btn2");
+    var box1=document.getElementById("box1");
+    var box2=document.getElementById("box2");
+    var timer=null;
+    //需求：指定盒子  运动到    指定位置
+    function animate(obj,target){
+        clearInterval(timer);
+            timer= setInterval(function () {
+            var leader=obj.offsetLeft;
+            var step=10;
+            leader+=step;
+            obj.style.left=leader+"px";
+            if(leader>target){
+                clearInterval(timer);
+            }
+        },15);
+    }
+    //移动到900
+    btn1.onclick= function () {
+        animate(box1,900);
+    }
+    //移动到900
+    btn2.onclick=function (){
+        animate(box2,900);
+    }
+</script>
+</body>
+</html>

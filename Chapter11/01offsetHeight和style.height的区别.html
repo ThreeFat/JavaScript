@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #demo {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="demo" style=""></div>
+<script>
+    var demo = document.getElementById("demo");
+    //console.log(demo.style.height);//sytle.height只能获取行内样式
+    //是字符串而且有单位
+    //console.log(demo.offsetHeight);//offsetHeight获取到的是真实的自身高度
+    //是数值
+    //demo.style.height = "200px";//可以设置行内样式
+    //demo.offsetHeight = "200px";//offsetHeight是只读属性 无法对样式进行设置
+
+
+</script>
+</body>
+</html>

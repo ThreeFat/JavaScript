@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+			margin:10px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<button id="btn1">奔跑到200吧盒子</button>
+<button id="btn2">奔跑到400吧盒子</button>
+<div id="box"></div>
+<script>
+    var box = document.getElementById("box");
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    //var timer = null;
+
+    //能够让 任意对象 移动到 指定位置
+    function animate(obj, target) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+            //leader = leader + step
+            var leader = obj.offsetLeft;
+            //target-leader
+            var step = 9;
+            var step = (target - leader) > 0 ? step : -step;
+            //
+            if (Math.abs(target - leader) > Math.abs(step)) {
+                leader = leader + step;
+                obj.style.left = leader + "px";
+            } else {
+                obj.style.left = target + "px";
+                clearInterval(obj.timer);
+            }
+        }, 15)
+    }
+
+    //点击按钮让box到400px的位置
+    btn1.onclick = function () {
+        animate(box, 200);
+    }
+    btn2.onclick = function () {
+        animate(box, 400);
+    }
+</script>
+</body>
+</html>
